@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>LoginPage-FlaskSQLite</title>
+</head>
+<body>
+    <main>
+        <form method="POST">
+            {% with errors = get_flashed_messages(category_filter=["error"]) %}
+            {% if errors %}
+              <ul>
+                {%- for msg in errors %}
+                <li class="message">{{ msg }}<a class="close" href="{{url_for('login.loginPage')}}"><i class='bx bx-comment-x'></i></a></li>
+                {% endfor %}
+              </ul>
+           
+            {% endif %}
+            {% endwith %}
+            <div class="container-blur"></div>
+                <div class="container-login">
+                    <header class="title">Login</header>
+                    <div class="credentials">
+                        <input type="text" placeholder="Enter Email Address" class="emailAdress" name="userName" id="userName" required>
+                        <input type="password" placeholder="Enter Password" class="password" name="password" id="password" required>
+                        <button class="submit-login" type="submit">Login</button>
+                    </div>
+                    <div class="app-login">
+                        <button class="app-google"><i class='bx bxl-google' ></i><span></span></button>
+                        <button class="app-apple"><i class='bx bxl-apple' ></i><span></span></button>
+                    </div>
+                </div>
+            </form>
+        
+    </main>
+    
+</body>
+</html>

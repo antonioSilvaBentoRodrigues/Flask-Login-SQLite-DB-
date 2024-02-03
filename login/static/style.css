@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+*{
+    font-family: 'Ubuntu';
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    margin-left: 5px;
+    font-size: 18px;
+}
+body{
+    min-height: 100vh;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: #cccc;
+   
+}
+
+.message{
+    background-color: rgba(255, 0, 0, 0.253);
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+.message-logged{
+    background-color: rgba(10, 255, 63, 0.541);
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+.container-blur{
+    position: relative;
+    background-color: #cccc;
+    height:1px;
+    width: 1%;
+    background: transparent;
+}
+
+.container-login{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 15vh auto;
+    background-color:hwb(0 89% 11%);
+    border-radius: 30px;
+    opacity: 70%;
+    box-shadow:2px 8px 8px rgba(0, 0, 0, 0.4);
+    
+}
+
+.container-login:hover{
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.title{
+    font-family:monospace;
+    position:relative;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    top: 30px;
+    font-size: 43px;
+}
+
+.credentials{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    top: 10vh;
+}
+
+.emailAdress, .password{
+    width: 60%;
+    height: 2rem;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+}
+
+.submit-login{
+    width: 7rem;
+    height: 3rem;
+    font-size: 18px;
+    border-radius: 10px;
+    border:none;
+    margin-top:2vh;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.submit-login:hover{
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.app-login{
+    position: relative;
+    display: flex;
+    top: 20vh;
+    justify-content: center;
+    gap: 10vh;    
+}
+
+.app-apple, .app-google{
+    width: 5rem;
+    height: 2rem;
+    font-size: 25px;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border:none;
+    cursor:pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.app-apple span, .app-google span{
+    position: relative;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+      
+}
+
+
+.app-apple span::after, .app-google span::after{
+    content: '\00bb';
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: -25px;
+    transition: 0.5s;
+
+}
+
+
+.app-apple:hover span, .app-google:hover span{
+    padding-left: 25px;
+    
+}
+
+.app-apple:hover span:after, .app-google:hover span::after {
+    opacity: 1;
+    right: 0;
+  }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>welcome</title>
+</head>
+<body>
+    {% with errors = get_flashed_messages(category_filter=["error"]) %}
+        {% if errors %}
+        <ul>
+        {%- for msg in errors %}
+            <li class="message-logged">{{ msg }}<a class="close" href="{{url_for('login.loginPage')}}"><i class='bx bx-comment-x'></i></a></li>
+        {% endfor %}
+        </ul> 
+        {% endif %}
+    {% endwith %}
+    <h1>Welcome</h1>
+</body>
+</html>
